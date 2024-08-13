@@ -21,7 +21,7 @@ String {
 }
 ```
 
-Becomes...
+Becomes:
 ```swift
 """
 Line 1
@@ -38,7 +38,7 @@ String(separator: " != ") {
 }
 ```
 
-Becomes...
+Becomes:
 ```swift
 "String 1 != String 2"
 ```
@@ -54,11 +54,13 @@ String {
 }
 ```
 
-Becomes...
+Becomes:
 ```swift
+"""
 1234
 true
 3D5E76E1-CB1D-4FEF-A5CA-3C67AA08BF47
+"""
 ```
 
 ### Nested String Builders
@@ -93,8 +95,9 @@ String {
 }
 ```
 
-Becomes...
+Becomes:
 ```swift
+"""
 One
 Two.Three
 Four
@@ -105,6 +108,7 @@ Seven
 Eight
 Nine
 Ten
+"""
 ```
 
 ## Installation
