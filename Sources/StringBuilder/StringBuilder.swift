@@ -40,14 +40,6 @@ public extension StringBuilder {
 }
 
 public extension StringBuilder {
-	static func buildOptional(_ component: String?) -> [String] {
-		if let component {
-			return [component]
-		}
-		
-		return []
-	}
-
 	static func buildOptional(_ component: [String]?) -> [String] {
 		component ?? []
 	}

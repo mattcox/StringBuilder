@@ -143,3 +143,20 @@ func testConvertibleTypes() throws {
 	
 	#expect(built == compare)
 }
+
+/// Test building a string from an optional value.
+///
+@Test("Test building string from optional value")
+func testOptional() throws {
+	let value: String? = "Value"
+	
+	let built = String {
+		if let value {
+			value
+		}
+	}
+	
+	let compare = "Value"
+	
+	#expect(built == compare)
+}
