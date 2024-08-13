@@ -16,8 +16,8 @@ using a `resultBuilder`.
 To build a basic multi-line string:
 ```swift
 String {
-	"Line 1"
-	"Line 2"
+    "Line 1"
+    "Line 2"
 }
 ```
 
@@ -33,8 +33,8 @@ Line 2
 A custom separator can be used to control how the strings are joined:
 ```swift
 String(separator: " != ") {
-	"String 1"
-	"String 2"
+    "String 1"
+    "String 2"
 }
 ```
 
@@ -48,9 +48,9 @@ Any type that conforms to `CustomStringConvertible` can be added to the
 string builder:
 ```swift
 String {
-	1234
-	true
-	UUID()
+    1234
+    true
+    UUID()
 }
 ```
 
@@ -65,30 +65,30 @@ true
 String builders can be nested with different separators at each level:
 ```swift
 String {
-	"One"
-	
-	String(separator: ".") {
-		"Two"
-		"Three"
-	}
-	
-	"Four"
-	
-	String {
-		String {
-			"Five"
-			
-			String(separator: "\n\n") {
-				"Six"
-				"Seven"
-			}
-			
-			"Eight"
-		}
-		
-		"Nine"
-	}
-	
+    "One"
+    
+    String(separator: ".") {
+        "Two"
+        "Three"
+    }
+    
+    "Four"
+    
+    String {
+        String {
+            "Five"
+            
+            String(separator: "\n\n") {
+                "Six"
+                "Seven"
+            }
+            
+            "Eight"
+        }
+        
+        "Nine"
+    }
+    
 	"Ten"
 }
 ```
